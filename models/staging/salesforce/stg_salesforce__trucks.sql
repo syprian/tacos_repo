@@ -1,3 +1,4 @@
+
 SELECT DISTINCT -- remove duplicates
 
     -- clarify the identifier
@@ -44,5 +45,5 @@ SELECT DISTINCT -- remove duplicates
     TRIM(model) AS model,
     
     opening_date
-
-FROM tacos.raw.trucks
+    
+FROM {{source('salesforce','trucks')}}
