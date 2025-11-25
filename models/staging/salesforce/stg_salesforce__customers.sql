@@ -1,3 +1,4 @@
+
 SELECT
 
     id AS customer_id,
@@ -10,4 +11,4 @@ SELECT
     LOWER(email) AS email,
     phone_number
 
-FROM tacos.raw.customers
+FROM {{source('salesforce', 'customers')}}

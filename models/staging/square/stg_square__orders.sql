@@ -1,3 +1,4 @@
+
 SELECT
 
     id AS order_id,
@@ -6,4 +7,4 @@ SELECT
     timestamp AS order_timestamp,
     amount AS order_amount
 
-FROM tacos.raw.orders
+FROM {{source('square','orders')}}
